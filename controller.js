@@ -1,8 +1,8 @@
 'use strict';
 
-let response = require('./res');
-let connection = require('./koneksi');
+var response = require('./rest');
+var connection = require('./koneksi');
 
 exports.index = function(req, res) {
-    response.ok("Rest Api berjalan");
+    response.ok("Rest Api berjalan", res);
 }

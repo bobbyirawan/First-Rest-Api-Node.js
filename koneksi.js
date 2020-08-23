@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+var mysql = require('mysql');
 
 // BUAT KONEKSI DATABASE
 const conn = mysql.createConnection({
@@ -15,4 +15,4 @@ conn.connect((err) =>{
     console.log("mysql terkoneksi");
 });
 
-module.exports(conn);
+module.exports = conn;
