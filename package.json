@@ -1,0 +1,25 @@
+{
+  "name": "firstrestapi",
+  "version": "1.0.0",
+  "description": "First REst Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobbyirawan/First-Rest-Api-Node.js.git"
+  },
+  "keywords": [
+    "First",
+    "REst",
+    "Api",
+    "Node.js"
+  ],
+  "author": "masboy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobbyirawan/First-Rest-Api-Node.js/issues"
+  },
+  "homepage": "https://github.com/bobbyirawan/First-Rest-Api-Node.js#readme"
+}
