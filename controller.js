@@ -51,13 +51,27 @@ exports.ubahDataMahasiswa = function (req, res) {
     let nim = req.body.nim;
     let nama = req.body.nama;
     let jurusan = req.body.jurusan;
-    connection.query("UPDATE mahasiswa SET nim =?, nama =?, jurusan =? where id_mahasiswa = ?", [nim, nama, jurusan, id], function (error, rows, fileds) {
-        if (error) {
-            connection.log(error);
-        } else {
-            response.ok("data berhasil diubah", res);
-        }
-    });
+    connection.query("UPDATE mahasiswa SET nim =?, nama =?, jurusan =? where id_mahasiswa = ?", [nim, nama, jurusan, id],
+        function (error, rows, fileds) {
+            if (error) {
+                connection.log(error);
+            } else {
+                response.ok("data berhasil diubah", res);
+            }
+        });
+}
+
+// HAPUS DATA MAHASISWA BERDASARKAN ID
+exports.hapusDataMahasiswa = function (req, res) {
+    let id = req.body.id_mahasiswa;
+    connection.query('DELETE FROM mahasiswa WHERE id_mahasiswa = ?', [id],
+        function (error, rows, fileds) {
+            if (error) {
+                connection.log(error);
+            } else {
+                response.ok('data berhasil dihapus', res);
+            }
+        });
 }
 
 // notes : 
