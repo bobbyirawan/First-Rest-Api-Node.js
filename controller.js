@@ -45,6 +45,21 @@ exports.tambahDataMahasiswa = function (req, res) {
     });
 }
 
+//UBAH DATA MAHASISWA BERDASARKAN ID
+exports.ubahDataMahasiswa = function (req, res) {
+    let id = req.body.id_mahasiswa;
+    let nim = req.body.nim;
+    let nama = req.body.nama;
+    let jurusan = req.body.jurusan;
+    connection.query("UPDATE mahasiswa SET nim =?, nama =?, jurusan =? where id_mahasiswa = ?", [nim, nama, jurusan, id], function (error, rows, fileds) {
+        if (error) {
+            connection.log(error);
+        } else {
+            response.ok("data berhasil diubah", res);
+        }
+    });
+}
+
 // notes : 
 // 1. jika ingin ambil data dari parameter gunakan params. example : let id = req.params.id
 // 2. jika ingin ambil data dari body atau dengan method post gunakan body. example : let nama = req.body.nama
