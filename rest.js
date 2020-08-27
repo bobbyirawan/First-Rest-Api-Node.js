@@ -31,6 +31,7 @@ exports.oknested = function (values, res) {
     }, {});
 
     var data = {
+        'sayhai': "ini adalah rest api pertama gueh",
         'status': 200,
         'value': hasil
     }
